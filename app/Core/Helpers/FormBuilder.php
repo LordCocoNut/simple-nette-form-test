@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\Core\Helpers;
 
@@ -7,7 +7,6 @@ use Nette\Application\UI\Form;
 
 class FormBuilder
 {
-
     /**
      * Assembles fields related to the company registration into a provided form
      * @param Form $formInstance
@@ -28,6 +27,7 @@ class FormBuilder
 
 
         $addSubmit && $formInstance->addSubmit('send', 'Registrovat');
+
         return $formInstance;
     }
 }

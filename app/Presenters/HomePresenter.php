@@ -1,17 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Presenters;
 
 use App\Core\Components\RegistrationResultDataGridControll;
-use App\Core\Helpers\{FormBuilder, GridBuilder};
+use App\Core\Helpers\FormBuilder;
+use App\Core\Helpers\GridBuilder;
 use Nette;
 
 
 final class HomePresenter extends Nette\Application\UI\Presenter
 {
-
     private $assembleCompanyRegistrationFields;
 
     public function __construct(private FormBuilder $formBuilder, private GridBuilder $gridBuilder)
@@ -31,10 +29,9 @@ final class HomePresenter extends Nette\Application\UI\Presenter
 
         $form->onSuccess[] = function (Nette\Application\UI\Form $form, Nette\Utils\ArrayHash $data) {
             //Parse hash to datagrid friendly data
-            $this->template->resultData = [(array)$data];
+            $this->template->resultData = [(array) $data];
         };
+
         return $form;
     }
-
-
 }

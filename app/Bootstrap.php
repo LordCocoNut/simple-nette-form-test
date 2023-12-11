@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App;
 
@@ -11,7 +9,7 @@ class Bootstrap
 {
     public static function boot(): Configurator
     {
-        $configurator = new Configurator;
+        $configurator = new Configurator();
         $appDir = dirname(__DIR__);
 
         //$configurator->setDebugMode('secret@23.75.345.200'); // enable for your remote IP

@@ -1,9 +1,8 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\Core\Helpers;
 
 use App\Core\ConstGroups\RegisterCompanyFormConstGroup as ConstGroup;
-use Nette\Application\UI\Form;
 use Ublaboo\DataGrid\DataGrid;
 
 class GridBuilder

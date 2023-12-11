@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\Core\Components;
 
@@ -11,7 +11,6 @@ use Ublaboo\DataGrid\DataGrid;
  */
 class RegistrationResultDataGridControll extends Control
 {
-
     public function __construct(private GridBuilder $gridBuilder)
     {
 
@@ -23,12 +22,10 @@ class RegistrationResultDataGridControll extends Control
      */
     public function render(array $data = [])
     {
-
         $grid = $this->gridBuilder->assembleCompanyRegistrationFields(new DataGrid());
         $grid->setDataSource($data);
 
         $this->addComponent($grid, 'theGrid');
         $this->template->render(__DIR__ . '/templates/register_result_datagrid.latte');
     }
-
 }
