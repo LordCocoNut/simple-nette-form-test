@@ -19,7 +19,8 @@
 		"nette/utils": "^4.0",
 		"latte/latte": "^3.0",
 		"tracy/tracy": "^2.9",
-		"inspirecz/coding-standard": "^4.0"
+		"inspirecz/coding-standard": "^4.0",
+		"ublaboo/datagrid": "^6.9"
 	},
 	"require-dev": {
 		"nette/tester": "^2.4",
