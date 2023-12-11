@@ -7,7 +7,6 @@ namespace App\Presenters;
 use App\Core\Components\RegistrationResultDataGridControll;
 use App\Core\Helpers\{FormBuilder, GridBuilder};
 use Nette;
-use Ublaboo\DataGrid\DataGrid;
 
 
 final class HomePresenter extends Nette\Application\UI\Presenter

@@ -20,9 +20,9 @@ class FormBuilder
 
         $requiredFiledText = "Toto pole je povinne.";
 
+        $formInstance->addText(ConstGroup::FORM_FIELD_ICO, "ICO:")->setRequired($requiredFiledText)->addRule(Form::PATTERN, 'Format ICO neni spravne. Melo by se jednat o cislo o 8 znacich.', '^\d{0,8}$');
         $formInstance->addText(ConstGroup::FORM_FIELD_COMPANY_NAME, "Nazev spolecnosti:")->setRequired($requiredFiledText);
         $formInstance->addText(ConstGroup::FORM_FIELD_ADDRESS, "Adresa spolecnosti")->setRequired($requiredFiledText);
-        $formInstance->addText(ConstGroup::FORM_FIELD_ICO, "ICO:")->setRequired($requiredFiledText)->addRule(Form::PATTERN, 'Format ICO neni spravne. Melo by se jednat o cislo o 8 znacich.', '^\d{0,8}$');
         $formInstance->addText(ConstGroup::FORM_FIELD_VAT, "DIC:")->setRequired($requiredFiledText)->addRule(Form::PATTERN, 'Format DIC neni spravne. Melo by se jednat o cislo o 8 znacich s prefixem kodu zeme (cz, sk...).', '^\w{2}\d{8}$');
         $formInstance->addText(ConstGroup::FORM_FIELD_STATUTORY_REPRESENTATIVE_FULL_NAME, "Jmeno statutarniho zastupce:")->setRequired($requiredFiledText);
 
