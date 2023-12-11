@@ -2,6 +2,11 @@
 {block content}
 <div class="wrapper">
     <div class="form-card">
+    {if  empty($resultData)}
         {control companyRegistrationForm}
+    {else}
+        {control resultGrid $resultData}
+    {/if}
+
     </div>
 </div>

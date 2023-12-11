@@ -8,3 +8,4 @@ search:
 			- *Factory
 			- *Facade
 			- *Builder
+			- *Components
