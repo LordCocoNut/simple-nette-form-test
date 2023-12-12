@@ -43,4 +43,4 @@ const aresRequest = async (ico) => {
 }
 
 
-formIco.addEventListener('change', ({target}) => aresRequest(target.value));
+formIco && formIco.addEventListener('change', ({target}) => aresRequest(target.value));
