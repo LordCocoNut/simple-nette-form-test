@@ -16,7 +16,6 @@ final class HomePresenter extends Nette\Application\UI\Presenter
 
     public function renderDefault()
     {
-        $this->template->data = [];
         $this->addComponent(new RegistrationResultDataGridControll($this->gridBuilder), 'resultGrid');
     }
 
