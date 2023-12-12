@@ -10,8 +10,6 @@ use Nette;
 
 final class HomePresenter extends Nette\Application\UI\Presenter
 {
-    private $assembleCompanyRegistrationFields;
-
     public function __construct(private FormBuilder $formBuilder, private GridBuilder $gridBuilder)
     {
     }
@@ -24,8 +22,7 @@ final class HomePresenter extends Nette\Application\UI\Presenter
 
     public function createComponentCompanyRegistrationForm(): Nette\Application\UI\Form
     {
-        $this->assembleCompanyRegistrationFields = $this->formBuilder->assembleCompanyRegistrationFields(new Nette\Application\UI\Form());
-        $form = $this->assembleCompanyRegistrationFields;
+        $form = $this->formBuilder->assembleCompanyRegistrationFields(new Nette\Application\UI\Form());
 
         $form->onSuccess[] = function (Nette\Application\UI\Form $form, Nette\Utils\ArrayHash $data) {
             //Parse hash to datagrid friendly data
